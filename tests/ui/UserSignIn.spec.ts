@@ -3,7 +3,7 @@ import { JobBoardPage } from '../../pages/jobBoardPage';
 import { JobData } from '../../data/jobData';
 
 test.describe('User Search Job and upload resume',()=>{
-    test.beforeAll(async ({ context }) => {
+    test.beforeEach(async ({ context }) => {
         await context.route("*.cookiebot.com", route => route.abort());
     });
     test('Search Job',async ({page})=>{
